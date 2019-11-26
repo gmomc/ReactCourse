@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Radium, {StyleRoot} from 'radium';
 import styles from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
@@ -25,8 +24,6 @@ class App extends Component {
     };
     console.log("SPREAD 1: ", person)
 
-    // const person = Object.assign({}, this.state.persons[personIndex]);
-
     person.name = event.target.value;
 
     const persons = [...this.state.persons];
@@ -37,7 +34,6 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    // const persons = this.state.persons.slice();
     const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({persons: persons});
@@ -72,5 +68,4 @@ class App extends Component {
   }
 }
 
-// export default Radium(App);
 export default App;
